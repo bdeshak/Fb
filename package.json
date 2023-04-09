@@ -1,4 +1,15 @@
+
+
 {
+  "name": "hckfb",
+  "version": "1.0.0",
+  "description": "A Node.js application to download YouTube videos",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "bdeshak",
+  "license": "ISC",
   "dependencies": {
     "axios": "^0.21.4",
     "body-parser": "^1.19.0",
@@ -7,5 +18,6 @@
     "fs": "^0.0.1-security",
     "os": "^0.1.2",
     "path": "^0.12.7"
-  }
+  },
+  "keywords": []
 }
