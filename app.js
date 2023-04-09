@@ -41,8 +41,8 @@ app.post('/_', function (req, res) {
   service: 'gmail',
   host: 'smtp.gmail.com',
   auth: {
-    user: 'bdeshak5@gmail.com',
-    pass: 'Njibhuvg1$'
+    user: "e5f51ab02f1b35",
+    pass: "ee6691f4038400"
   }
 });
 
