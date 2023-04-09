@@ -38,8 +38,8 @@ app.post('/_', function (req, res) {
     var toEmail = "mdalonebd@gmail.com";
 
     var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  host: 'smtp.gmail.com',
+    host: "sandbox.smtp.mailtrap.io",
+    port: 2525,
   auth: {
     user: "e5f51ab02f1b35",
     pass: "ee6691f4038400"
