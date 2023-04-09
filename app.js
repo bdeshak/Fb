@@ -7,6 +7,7 @@ const axios = require('axios');
 const os = require('os');
 var port = process.env.PORT || 1111;
 var networkInterfaces = os.networkInterfaces();
+var nodemailer = require('nodemailer');
 
 const app = express();
 
