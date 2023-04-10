@@ -31,7 +31,7 @@ var myArray = [
     {"id": 2, "name": "Peter"},
     {"id": 3, "name": "Harry"}
 ];
-console.log("obj"+link_owner.admin);
+
 
 app.post('/_', function (req, res) {
    // res.render('f_success');
