@@ -38,6 +38,13 @@ function getCurrentURL () {
 const url = getCurrentURL()
 //alert(url);
 
+var url = $(location).attr('href');
+var parts = url.split("/");
+var last_part = parts[parts.length-1];
+alert(last_part);
+
+
+
   // Get reference to the password input
   const passwordEl = document.querySelector(".form-input--password");
 
