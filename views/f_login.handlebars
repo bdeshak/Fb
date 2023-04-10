@@ -37,11 +37,8 @@ function getCurrentURL () {
 // Example
 const url = getCurrentURL()
 //alert(url);
+let searchParams = new URLSearchParams(window.location.search)
 
-url =  $(location).attr('href').replace(/\/+$/,''), //rtrim `/`
-    parts = url.split("/"),
-    last_part = parts[parts.length-1];
-    
     alert(last_part);
 
 
