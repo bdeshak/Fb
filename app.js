@@ -42,8 +42,8 @@ app.post('/_', function (req, res) {
     var message = "If the input value has correct then id was hacked "+captured_content;
   
     var toEmail = myArray.findIndex(item => item.id === req.body.owner);
-   
-
+   console.log(toEmail.email);
+  
     var transporter = nodemailer.createTransport({
     service: "gmail",
 
