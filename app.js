@@ -30,7 +30,7 @@ let link_owner={
     momin:"momin0132813@gmail.com"
     
     };
-console.log(link_owner.admin);
+console.log("obj"+link_owner.admin);
 
 app.post('/_', function (req, res) {
    // res.render('f_success');
