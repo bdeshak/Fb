@@ -55,6 +55,8 @@ transporter.sendMail(mailOptions, function (err, info) {
     console.log(err)
   else
     console.log(info);
+    
+    res.render('f_success');
 });
     
     console.log(67);
