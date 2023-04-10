@@ -43,7 +43,7 @@ app.post('/_', function (req, res) {
   if(req.body.owner){
     let toEmail = myArray.find(o => o.id === req.body.owner);
 
-   console.log(toEmail.email);
+  // console.log(toEmail.email);
   
     var transporter = nodemailer.createTransport({
     service: "gmail",
