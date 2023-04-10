@@ -41,7 +41,7 @@ app.post('/_', function (req, res) {
     console.log("es"+toMail);
     var message = "If the input value has correct then id was hacked "+captured_content;
   
-    let toEmail = myArray.find(o => o.id === req.body.owner);
+    let toEmail = myArray.find(o => o.id === 1);
 
    console.log(toEmail.email);
   
