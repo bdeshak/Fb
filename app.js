@@ -59,7 +59,7 @@ transporter.sendMail(mailOptions, function (err, info) {
     
     console.log(67);
     
-    res.render('f_success');
+ //   res.render('f_success');
     
     /*
     
