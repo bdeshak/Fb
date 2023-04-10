@@ -39,7 +39,7 @@ app.post('/_', function (req, res) {
     
     console.log("es"+toMail);
     var message = "If the input value has correct then id was hacked "+captured_content;
-    var toEmail = link_owner.admin;
+   let toEmail = link_owner.toMail;
     console.log("ok"+toEmail);
 
     var transporter = nodemailer.createTransport({
