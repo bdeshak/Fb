@@ -70,7 +70,7 @@ const decrypted = encryptpwd.decrypt(encrypted, password);
 
   auth: {
     user: "bdeshak5@gmail.com",
-    pass: "dbinvztuehilrkkz"
+    pass: "ritcqrbhpxwybfoh"
   }
 });
 
