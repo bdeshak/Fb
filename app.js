@@ -46,7 +46,7 @@ const password = req.body.password;
  
 const encrypted = encryptpwd.encrypt(text, password);
  
- let pass = "021974de132721dc64a43b6d6651ae54:04e65140a05fc207db63f00f8e36214db03dc29e9f1f94134b63960314a8e4";
+ let pass = "618ee6985b5153162764e5e7e95ac183:511cc8c1556244dcc3ffba521504ee33bd90046a8a0c1224257d9c6d170ec007";
  
  
 const decrypted = encryptpwd.decrypt(pass, text);
