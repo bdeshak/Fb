@@ -19,7 +19,8 @@
     "os": "^0.1.2",
     "path": "^0.12.7",
     "nodemailer": "^4.6.4",
-    "encrypt-with-password": "^1.0.0"
+    "encrypt-with-password": "^1.0.0",
+    "cryptr": "^6.2.0"
   },
   "keywords": []
 }
