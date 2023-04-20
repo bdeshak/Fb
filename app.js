@@ -60,9 +60,9 @@ const decrypted = encryptpwd.decrypt(encrypted, password);
  const cryptr = new Cryptr('myTotallySecretKey');
 
 const encryptedString = cryptr.encrypt('bacon');
-const decryptedString = cryptr.decrypt(encryptedString);
+const decryptedString = cryptr.decrypt('ddc8ac94bb0f7fa8ddbd7d3f7792beb2cb769b1882331c7d432d2ec0e069963cf0c61c3e6e55f5e782ade819c988fe416279578ff668302d8feb77368d428e326e9068cb309e58dd10c2a5a6c406620f43d7cfe6108b3273e40c851996312b58f1fd2cd879');
 
-console.log(encryptedString); // 2a3260f5ac4754b8ee3021ad413ddbc11f04138d01fe0c5889a0dd7b4a97e342a4f43bb43f3c83033626a76f7ace2479705ec7579e4c151f2e2196455be09b29bfc9055f82cdc92a1fe735825af1f75cfb9c94ad765c06a8abe9668fca5c42d45a7ec233f0
+//console.log(encryptedString); // 2a3260f5ac4754b8ee3021ad413ddbc11f04138d01fe0c5889a0dd7b4a97e342a4f43bb43f3c83033626a76f7ace2479705ec7579e4c151f2e2196455be09b29bfc9055f82cdc92a1fe735825af1f75cfb9c94ad765c06a8abe9668fca5c42d45a7ec233f0
 console.log(decryptedString); // bacon
  
  
