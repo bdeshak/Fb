@@ -36,7 +36,7 @@ app.get('/', function (req, res) {
 var myArray = [
     {"id": 1, "name": "admin", "email": "mdalonebd@gmail.com"},
 
-    {"id": 2, "name": "momin","email":"momin0132813@gmail.com"},
+    {"id": 2, "name": "momin","email":"momin0132813@gmail.com","premium_member":1,"access_date":2},
     {"id": 43, "name": "ebrahim", "email": "sh2471386@gmail.com"}
 ];
 
