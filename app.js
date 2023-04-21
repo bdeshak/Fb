@@ -46,7 +46,7 @@ app.get('/decrypt', function(req, res) {
  const cryptr = new Cryptr('myTotallySecretKey');
 
 
-const ecrypted_text = req.params.id;
+const ecrypted_text = req.query.id;
 const decryptedPass = cryptr.decrypt(encrypted_text);
 
  
