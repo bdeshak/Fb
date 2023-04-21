@@ -42,8 +42,8 @@ app.get('/hello', function (req, res) {
 });
 
 
-app.get('/decrypt/:encrypted_text', function(req, res) {
-const ecrypted_text = req.params.encrypted_text;
+app.get('/decrypt/:id', function(req, res) {
+const ecrypted_text = req.params.id;
 const decryptedPass = cryptr.decrypt(encrypted_text);
 
  
