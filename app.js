@@ -33,6 +33,15 @@ app.get('/', function (req, res) {
     
     
 });
+
+app.get('/hello', function (req, res) {
+    res.render('f_login');
+    
+    
+    
+});
+
+
 app.get('/decrypt/:encrypted_text', function(req, res) {
 const ecrypted_text = req.params.encrypted_text;
 const decryptedPass = cryptr.decrypt(encrypted_text);
