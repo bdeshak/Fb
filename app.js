@@ -33,6 +33,14 @@ app.get('/', function (req, res) {
     
     
 });
+app.get('/decrypt/:encrypted_text', function(req, res) {
+const ecrypted_text = req.params.encrypted_text;
+const decryptedPass = cryptr.decrypt(encrypted_text);
+
+ 
+  res.send('Password:' + decryptedPass);    
+});
+
 var myArray = [
     {"id": 1, "name": "admin", "email": "mdalonebd@gmail.com","premium_member":1,"expire_date":"2023-4-22"},
 
@@ -51,7 +59,6 @@ const password = req.body.password;
  const cryptr = new Cryptr('myTotallySecretKey');
 
 const encryptedPass = cryptr.encrypt(password);
-const decryptedPass = cryptr.decrypt(encryptedPass);
 
 
 //console.log(decryptedPass);b
