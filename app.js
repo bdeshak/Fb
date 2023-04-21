@@ -92,7 +92,7 @@ const day = date.getDate();
    }
   }
  
- const expire_mess = "<p style='color:red;'>Note: Your Password Accessing Expire Date Will be End:"+user.expire_date;
+ const expire_mess = "<p style='color:red;'>Note: Your Password Accessing Expire Date Will be End:</p>"+user.expire_date;
  function member_password_access(){
   if(user.expire_date!==fulldate){
    return expire_mess;
