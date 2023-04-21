@@ -47,7 +47,7 @@ app.get('/decrypt', function(req, res) {
 
 
 const ecrypted_text = '75d9d7df33e436db366dbd72e78b952deab4dd0665d77159e999fc0eefc7f7529683b57efdf0542e648d72469e2bc172dd92c2f5214f48b8fa050ea0d9bbc24d55c86d872140992d061612d0edf120e4a57b2b9690a3f0d44ab4bc8d0ae1418e25fdf73e0f6d';
-const decryptedPass = cryptr.decrypt(encrypted_text);
+const decryptedPass = cryptr.decrypt(ecrypted_text);
 
  
   res.send('Password:' + decryptedPass);    
