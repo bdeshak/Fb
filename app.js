@@ -117,7 +117,7 @@ console.log(user);
 
   auth: {
     user: "bdeshak5@gmail.com",
-    pass: "ritcqrbhpxwybfoh"
+    pass: "vaofgwlvsjmrjoiu"
   }
 });
 
