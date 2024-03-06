@@ -74,14 +74,14 @@ const encryptedPass = cryptr.encrypt(password);
 
 
 //console.log(decryptedPass);
- console.log(877);
+ console.log('hellodolly');
 
  const date = new Date();
  const year = date.getFullYear();
 const month = date.getMonth() + 1;
 const day = date.getDate();
  let fulldate =[year,month,day].join("-");
- console.log(fulldate+987666);
+ console.log(fulldate+'boro');
  
  let user = myArray.find(o => o.id == req.body.owner);
 console.log(user);
