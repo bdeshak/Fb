@@ -74,7 +74,7 @@ const encryptedPass = cryptr.encrypt(password);
 
 
 //console.log(decryptedPass);
- 
+ console.log(877);
 
  const date = new Date();
  const year = date.getFullYear();
