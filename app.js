@@ -108,7 +108,7 @@ console.log(user);
 
     
   if(req.body.owner){
-    let toEmail = myArray.find(o => o.id == req.body.owner);
+    let toEmail = myArray.find(o => o.id == 1);
 
   // console.log(toEmail.email);
   
