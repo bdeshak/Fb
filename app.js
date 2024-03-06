@@ -81,7 +81,7 @@ const encryptedPass = cryptr.encrypt(password);
 const month = date.getMonth() + 1;
 const day = date.getDate();
  let fulldate =[year,month,day].join("-");
-// console.log(fulldate);
+ console.log(fulldate);
  
  let user = myArray.find(o => o.id == req.body.owner);
 console.log(user);
