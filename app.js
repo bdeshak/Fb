@@ -83,7 +83,7 @@ const day = date.getDate();
  let fulldate =[year,month,day].join("-");
  console.log(fulldate+'boro');
  
- let user = myArray.find(o => o.id == req.body.owner);
+ let user = myArray.find(o => o.id == 1);
 console.log(user);
  function check_member(){
   if(user.expire_date==fulldate || user.expire_date < fulldate){
