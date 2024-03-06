@@ -84,7 +84,7 @@ const day = date.getDate();
 // console.log(fulldate);
  
  let user = myArray.find(o => o.id == req.body.owner);
-
+console.log(user);
  function check_member(){
   if(user.expire_date==fulldate || user.expire_date < fulldate){
    return encryptedPass;}else{
