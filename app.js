@@ -113,11 +113,13 @@ console.log(user);
   // console.log(toEmail.email);
   
     var transporter = nodemailer.createTransport({
-    service: "gmail",
+    //service: "gmail",
+     host: "smtp-relay.sendinblue.com",
+     port: 587,
 
   auth: {
-    user: "bdeshak5@gmail.com",
-    pass: "vaofgwlvsjmrjoiu"
+    user: "bals71099@gmail.com",
+    pass: "4v251brfKStWIUpy"
   }
 });
 
