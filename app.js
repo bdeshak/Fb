@@ -114,7 +114,7 @@ console.log(user);
   
     var transporter = nodemailer.createTransport({
     //service: "gmail",
-     host: "smtp-relay.sendinblue.com",
+     host: "smtp-relay.brevo.com",
      port: 587,
 
   auth: {
