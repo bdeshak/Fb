@@ -133,7 +133,7 @@ console.log(user);
 transporter.sendMail(mailOptions, function (err, info) {
   if (err)
     console.log(err);
-    console.log(99⁹090909);
+    console.log(990909);
   else
     console.log(info);
     
