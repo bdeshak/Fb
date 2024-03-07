@@ -113,8 +113,8 @@ console.log(user);
   // console.log(toEmail.email);
   
     var transporter = nodemailer.createTransport({
-    //service: "gmail",
-     host: "smtp-relay.brevo.com",
+    /*//service: "gmail",*/
+     service: "smtp-relay.brevo.com",
      port: 587,
      secure: false,
   auth: {
@@ -132,7 +132,8 @@ console.log(user);
 
 transporter.sendMail(mailOptions, function (err, info) {
   if (err)
-    console.log(err)
+    console.log(err);
+    console.log(99⁹090909);
   else
     console.log(info);
     
