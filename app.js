@@ -119,7 +119,7 @@ console.log(user);
      secure: false,
   auth: {
     user: "bals71099@gmail.com",
-    pass: "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"
+    pass: "4v251brfKStWIUpy"
   }
 });
 
