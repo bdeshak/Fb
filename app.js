@@ -114,17 +114,17 @@ console.log(user);
   
     var transporter = nodemailer.createTransport({
     /*//service: "gmail",*/
-     host: "s.com",
+     host: "smtp-relay.brevo.com",
      port: 587,
-     secure: false,
+     secure: true,
   auth: {
     user: "bals71099@gmail.com",
-    pass: "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"
+    pass: "4v251brfKStWIUpy"
   }
 });
 
    const mailOptions = {
-  from: 'bdeshak5@gmail.com',
+  from: 'bals71099@gmail.com',
   to: toEmail.email, //list of receivers
   subject: 'Phishing service by "Eshak"', // Subject line
   html: template //plain text body
